@@ -9,7 +9,7 @@
  * Plugin Name:       Nordic Milk Scroller
  * Plugin URI:        https://www.taifuun.ee
  * Description:       This plugin adds fading scroller with pagination.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Taifuun
  * Author URI:        https://www.taifuun.ee
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'NM_SCROLLER_VERSION', '1.0.0' );
+define( 'NM_SCROLLER_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.
