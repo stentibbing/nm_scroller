@@ -1,0 +1,30 @@
+.nm-scroller {
+  display: flex;
+}
+.nm-scroller-nav {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.nm-scroller-left,
+.nm-scroller-right {
+  width: 20px;
+  height: 20px;
+  background-image: url(./img/deary-nav-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+.nm-scroller-left {
+  transform: rotate(180deg);
+}
+
+.nm-scroller-pages {
+  width: 100%;
+}
+.nm-scroller-page-number {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
