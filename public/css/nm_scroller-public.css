@@ -1,0 +1,77 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.nm-scroller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.nm-scroller .nm-scroller-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0;
+  z-index: 2;
+}
+
+@media (max-width: 992px) {
+  .nm-scroller .nm-scroller-nav {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.nm-scroller .nm-scroller-nav .nm-scroller-left,
+.nm-scroller .nm-scroller-nav .nm-scroller-right {
+  width: 60px;
+  height: 50px;
+  background-image: url(../img/deary-nav-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.nm-scroller .nm-scroller-nav .nm-scroller-left {
+  margin-right: 40px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.nm-scroller .nm-scroller-pages {
+  width: 100%;
+}
+
+.nm-scroller .nm-scroller-page-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.nm-scroller .nm-scroller-page-number .nm-scroller-cur-page {
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nm-scroller .nm-scroller-page-number .nm-scroller-total-pages {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Courier New", Courier, monospace;
+}
+/*# sourceMappingURL=nm_scroller-public.css.map */
