@@ -49,8 +49,8 @@ class Nm_scroller_Admin {
 		$labels = array(
 			'name'                  => _x( 'Nordic Milk Scroller', 'Post Type General Name', 'nm_scroller' ),
 			'singular_name'         => _x( 'Page', 'Post Type Singular Name', 'nm_scroller' ),
-			'menu_name'             => __( 'NM Scroller', 'nm_scroller' ),
-			'name_admin_bar'        => __( 'NM Scroller', 'nm_scroller' ),
+			'menu_name'             => __( 'Scroller', 'nm_scroller' ),
+			'name_admin_bar'        => __( 'Scroller', 'nm_scroller' ),
 			'archives'              => __( 'Our Pages', 'nm_scroller' ),
 			'attributes'            => __( 'Page Attributes', 'nm_scroller' ),
 			'parent_item_colon'     => __( 'Parent page:', 'nm_scroller' ),
