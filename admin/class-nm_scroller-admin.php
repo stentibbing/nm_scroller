@@ -78,7 +78,6 @@ class Nm_scroller_Admin {
 			'description'           => __( 'Pages to be shown on the scroller section', 'nm_scroller' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'editor', 'page-attributes'),
-			'taxonomies'						=> array( 'packages' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
