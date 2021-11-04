@@ -90,8 +90,6 @@ class Nm_scroller {
 
 		$plugin_admin = new Nm_scroller_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_admin, 'register_scroller_cpt' );
 		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'register_background_metabox' );
 		$this->loader->add_action( 'save_post', $plugin_admin,'save_background_color' );
