@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: https://www.kbuum.com
-Author https://www.kbuum.com
+Author https://www.taifuun.ee
 Tags: scroller, fading
 Requires at least: 3.0.1
 Tested up to: 3.4
