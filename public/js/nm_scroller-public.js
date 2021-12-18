@@ -22,7 +22,12 @@
       );
       $(".nm-scroller-single-page-" + (nmActivePage - increment)).fadeOut(
         function () {
-          $(".nm-scroller-single-page-" + nmActivePage).fadeIn();
+          $(this).removeClass("active-scroller-page");
+          $(document).trigger("scroller-page-leave");
+          $(".nm-scroller-single-page-" + nmActivePage).fadeIn(function () {
+            $(this).addClass("active-scroller-page");
+            $(document).trigger("scroller-page-enter");
+          });
         }
       );
     }
@@ -75,6 +80,8 @@
       }
     });
 
-    $(".nm-scroller-single-page-" + nmActivePage).show();
+    $(".nm-scroller-single-page-" + nmActivePage).show(function () {
+      $(this).addClass("active-scroller-page");
+    });
   });
 })(jQuery);
