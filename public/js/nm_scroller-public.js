@@ -12,6 +12,14 @@
       $(".nm-scroller-total-pages").html("/" + nmTotalPages);
     }
 
+    function showActivePage(activePage) {
+      $(".nm-scroller-single-page-" + nmActivePage).fadeIn(function () {
+        $(this).addClass("active-scroller-page");
+        const enterEvent = new Event("enter");
+        $(this)[0].dispatchEvent(enterEvent);
+      });
+    }
+
     function scrollPage(increment) {
       nmActivePage = nmActivePage + increment;
       updatePageNumber();
@@ -23,11 +31,9 @@
       $(".nm-scroller-single-page-" + (nmActivePage - increment)).fadeOut(
         function () {
           $(this).removeClass("active-scroller-page");
-          $(document).trigger("scroller-page-leave");
-          $(".nm-scroller-single-page-" + nmActivePage).fadeIn(function () {
-            $(this).addClass("active-scroller-page");
-            $(document).trigger("scroller-page-enter");
-          });
+          const leaveEvent = new Event("leave");
+          $(this)[0].dispatchEvent(leaveEvent);
+          showActivePage(nmActivePage);
         }
       );
     }
@@ -35,19 +41,6 @@
     function changeBackground(color) {
       $("body").animate({ backgroundColor: color }, 1500);
     }
-
-    nmScrollerPages.each(function () {
-      nmTotalPages++;
-      $(this).addClass("nm-scroller-single-page-" + nmTotalPages);
-      $(this).hide();
-    });
-
-    $("body").css(
-      "background-color",
-      $(".nm-scroller-single-page-" + nmActivePage).attr(
-        "data-background-color"
-      )
-    );
 
     function hideEndScroller() {
       if (nmActivePage == 1) {
@@ -63,8 +56,21 @@
       }
     }
 
+    nmScrollerPages.each(function () {
+      nmTotalPages++;
+      $(this).addClass("nm-scroller-single-page-" + nmTotalPages);
+    });
+
+    $("body").css(
+      "background-color",
+      $(".nm-scroller-single-page-" + nmActivePage).attr(
+        "data-background-color"
+      )
+    );
+
     hideEndScroller();
     updatePageNumber();
+    showActivePage(nmActivePage);
 
     $(".nm-scroller-left").click(function () {
       if (nmActivePage != 1) {
@@ -78,10 +84,6 @@
         scrollPage(1);
         hideEndScroller();
       }
-    });
-
-    $(".nm-scroller-single-page-" + nmActivePage).show(function () {
-      $(this).addClass("active-scroller-page");
     });
   });
 })(jQuery);

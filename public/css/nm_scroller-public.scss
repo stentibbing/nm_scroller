@@ -23,6 +23,11 @@
 .nm-scroller-pages {
   width: 100%;
 }
+
+.nm-scroller-single-page {
+  display: none;
+}
+
 .nm-scroller-page-number {
   display: flex;
   align-items: center;
