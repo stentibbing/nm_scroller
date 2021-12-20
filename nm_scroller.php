@@ -9,7 +9,7 @@
  * Plugin Name:       Nordic Milk Scroller
  * Plugin URI:        https://www.taifuun.ee
  * Description:       This plugin adds scroller with pagination
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            Taifuun OÜ
  * Author URI:        https://www.taifuun.ee
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if (! defined('WPINC')) {
 /**
  * Currently plugin version.
  */
-define('NM_SCROLLER_VERSION', '1.0.6');
+define('NM_SCROLLER_VERSION', '1.0.7');
 
 /**
  * The code that runs during plugin activation.
