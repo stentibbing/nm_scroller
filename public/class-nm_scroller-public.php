@@ -80,6 +80,7 @@ class Nm_scroller_Public
     {
         $args = array(
             'orderby' => 'menu_order',
+            'order' => 'ASC',
             'post_type' => 'scroller',
             'nopaging' => true,
         );
