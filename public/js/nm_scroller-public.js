@@ -85,5 +85,14 @@
         hideEndScroller();
       }
     });
+
+    $(".nm-scroller-left, .nm-scroller-right").click(function () {
+      $([document.documentElement, document.body]).animate(
+        {
+          scrollTop: $(".nm-scroller").offset().top,
+        },
+        1000
+      );
+    });
   });
 })(jQuery);

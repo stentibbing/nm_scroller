@@ -1,11 +1,13 @@
 .nm-scroller {
   display: flex;
 }
+
 .nm-scroller-nav {
   display: flex;
   align-items: center;
   z-index: 2;
 }
+
 .nm-scroller-left,
 .nm-scroller-right {
   width: 20px;
