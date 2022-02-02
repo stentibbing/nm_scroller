@@ -85,21 +85,7 @@ class Nm_scroller_Public
             'nopaging' => true,
         );
         $scroller_pages = get_posts($args);
-        $output =  '<div class="nm-scroller">';
-        $output .= '<div class="nm-scroller-nav"><div class="nm-scroller-left"></div>';
-        $output .= '<div class="nm-scroller-page-number"><span class="nm-scroller-cur-page"></span><span class="nm-scroller-total-pages"></span></div>';
-        $output .= '<div class="nm-scroller-right"></div></div>';
-        $output .= '<div class="nm-scroller-pages">';
-        foreach ($scroller_pages as $page) {
-            if ($page->post_status == 'publish') {
-                $page_background = '#' . get_post_meta($page->ID)['nm_scroller_background_color'][0];
-            
-                $output .= '<div class="nm-scroller-single-page" data-background-color="' . $page_background . '">';
-                $output .= apply_filters('the_content', $page->post_content);
-                $output .= '</div>';
-            }
-        }
-        $output .= '</div></div>';
-        return $output;
+        
+        return require plugin_dir_path(__FILE__) . '/partials/nm_scroller-public-view.php';
     }
 }
